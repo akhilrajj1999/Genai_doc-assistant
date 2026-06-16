@@ -7,12 +7,14 @@ from langchain_community.llms import Databricks
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 
-CATALOG  = "workspace"
-SCHEMA   = "default"
-VOLUME   = "genai_doc_assistant"
-VOL_ROOT = f"/Volumes/{CATALOG}/{SCHEMA}/{VOLUME}"
-FAISS_PATH  = f"{VOL_ROOT}/faiss_index"
-DOCS_PATH   = f"{VOL_ROOT}/docs_output"
+#CATALOG  = "workspace"
+#SCHEMA   = "default"
+#VOLUME   = "genai_doc_assistant"
+#VOL_ROOT = f"/Volumes/{CATALOG}/{SCHEMA}/{VOLUME}"
+#FAISS_PATH  = f"{VOL_ROOT}/faiss_index"
+#DOCS_PATH   = f"{VOL_ROOT}/docs_output"
+
+FAISS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "faiss_index")
 
 st.set_page_config(page_title="Pipeline Doc Assistant", page_icon="🔍", layout="wide")
 
